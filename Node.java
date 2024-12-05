@@ -23,6 +23,10 @@ public class Node<T> {
         this.next = next;
     }
 
-    
+    @Override
+    public String toString() {
+        return "Node [value=" + value + ", next=" + next + "]";
+    }
+
     
 }
