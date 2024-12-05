@@ -7,13 +7,12 @@ public class LinkedList<T> {
         this.tail = null;
     }
 
-    public void addHead(T value) {
-        Node<T> newNode = new Node<>(value);
+    public void addHead(Node<T> node) {
         if (head == null) {
-            head = newNode;
+            head = node;
         } else {
-            newNode.setNext(head);
-            head = newNode;
+            node.setNext(head);
+            head = node;
         }
     }
 
@@ -22,7 +21,7 @@ public class LinkedList<T> {
         String result = " La lista contiene: ";
         Node<T> current = head;
         while (current != null) {
-            result += current;
+            result += current.getValue() + " ";
             current = current.getNext();
         }
         return result;
