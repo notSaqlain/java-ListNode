@@ -15,8 +15,11 @@ public class Main {
 
         
         LinkedList<String> list = new LinkedList<>();
-        list.addHead(new Node<String>("Saqlain"));
-        list.addHead(new Node<String>("Khalid"));
+        //list.addHead(new Node<String>("Saqlain"));
+        //list.addHead(new Node<String>("Khalid"));
+
+        list.addHead("Saqlain");
+        list.addHead("Khalid");
 
         System.out.println(list);
 

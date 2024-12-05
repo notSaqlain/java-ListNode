@@ -7,7 +7,18 @@ public class LinkedList<T> {
         this.tail = null;
     }
 
+    /*
     public void addHead(Node<T> node) {
+        if (head == null) {
+            head = node;
+        } else {
+            node.setNext(head);
+            head = node;
+        }
+    }
+    */
+    public void addHead(T value) {
+        Node<T> node = new Node<>(value);
         if (head == null) {
             head = node;
         } else {
