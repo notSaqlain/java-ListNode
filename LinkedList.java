@@ -16,4 +16,10 @@ public class LinkedList<T> {
             head = newNode;
         }
     }
+
+    @Override
+    public String toString() {
+        return "LinkedList [head=" + head + ", tail=" + tail + "]";
+    }
+
 }
