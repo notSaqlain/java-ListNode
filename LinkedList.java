@@ -19,7 +19,14 @@ public class LinkedList<T> {
 
     @Override
     public String toString() {
-        return "LinkedList [head=" + head + ", tail=" + tail + "]";
+        String result = " La lista contiene: ";
+        Node<T> current = head;
+        while (current != null) {
+            result += current;
+            current = current.getNext();
+        }
+        return result;
+
     }
 
 }

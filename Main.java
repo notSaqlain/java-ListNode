@@ -13,5 +13,11 @@ public class Main {
 
         System.out.println(node1);
 
+        
+        LinkedList<String> list = new LinkedList<>();
+        list.addHead("Batt ");
+        list.addHead("Gandu ");
+        System.out.println(list);
+
     }
 }
