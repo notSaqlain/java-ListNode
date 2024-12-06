@@ -58,6 +58,7 @@ public class LinkedList<T> {
             }
             current = current.getNext();
         }
+        throw new Exception("Elemento non trovato!");
     }
 
 

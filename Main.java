@@ -28,6 +28,7 @@ public class Main {
         System.out.println(list);
 
         list.remove("Khalid");
+        list.remove("Kha");
         System.out.println(list);
 
 
