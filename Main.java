@@ -20,6 +20,7 @@ public class Main {
 
         list.addHead("Saqlain");
         list.addHead("Khalid");
+        list.addHead("Khalid");
 
         System.out.println(list);
 
