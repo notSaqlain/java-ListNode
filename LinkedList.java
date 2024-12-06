@@ -27,6 +27,19 @@ public class LinkedList<T> {
         }
     }
 
+    public void addTail(T value) {
+        Node<T> Tailnode = new Node<>(value);
+        if (head == null) {
+            head = Tailnode;
+        } else {
+            Node<T> current = head;
+            while (current.getNext() != null) {
+                current = current.getNext();
+            }
+            current.setNext(Tailnode);
+        }
+    }
+
     @Override
     public String toString() {
         String result = " La lista contiene: ";
