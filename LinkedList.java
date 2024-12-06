@@ -40,6 +40,25 @@ public class LinkedList<T> {
         }
     }
 
+    public void remove(T value) {
+        if (head == null) {
+            return;
+        }
+        if (head.getValue().equals(value)) {
+            head = head.getNext();
+            return;
+        }
+        Node<T> current = head;
+        while (current.getNext() != null) {
+            if (current.getNext().getValue().equals(value)) {
+                current.setNext(current.getNext().getNext());
+                return;
+            }
+            current = current.getNext();
+        }
+    }
+
+
     @Override
     public String toString() {
         String result = " La lista contiene: ";
