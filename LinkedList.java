@@ -61,6 +61,21 @@ public class LinkedList<T> {
         throw new Exception("Elemento non trovato!");
     }
 
+    public void LastFirst() throws Exception {
+        if (head == null || head.getNext() == null) {
+            throw new Exception("Lista vuota o con un solo elemento!");
+        }
+    
+        Node<T> first = head;
+        Node<T> second = head.getNext();
+        Node<T> last = head;
+        while (last.getNext() != null) {
+            last = last.getNext();
+        }
+        last.setNext(first);
+        
+    }
+
 
     @Override
     public String toString() {

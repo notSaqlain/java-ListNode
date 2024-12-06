@@ -20,15 +20,16 @@ public class Main {
 
         list.addHead("Saqlain");
         list.addHead("Khalid");
-        list.addHead("Khalid");
-
+        list.addHead("START!");
         System.out.println(list);
 
         list.addTail("END!");
         System.out.println(list);
 
         list.remove("Khalid");
-        list.remove("Kha");
+        System.out.println(list);
+
+        list.LastFirst();
         System.out.println(list);
 
 
