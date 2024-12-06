@@ -23,5 +23,8 @@ public class Main {
 
         System.out.println(list);
 
+        list.addTail("END!");
+        System.out.println(list);
+
     }
 }
