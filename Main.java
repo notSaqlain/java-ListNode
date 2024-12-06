@@ -2,7 +2,7 @@ import java.util.*;
 
 @SuppressWarnings("unused")
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Node<String> node1 = new Node<>("Batt ");
         Node<String> node2 = new Node<>("Gandu ");
 
@@ -25,6 +25,10 @@ public class Main {
 
         list.addTail("END!");
         System.out.println(list);
+
+        list.remove("Khalid");
+        System.out.println(list);
+
 
     }
 }

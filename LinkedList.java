@@ -40,14 +40,16 @@ public class LinkedList<T> {
         }
     }
 
-    public void remove(T value) {
+    public void remove(T value) throws Exception {
         if (head == null) {
-            return;
+            throw new Exception("Lista vuota!");
         }
+
         if (head.getValue().equals(value)) {
             head = head.getNext();
             return;
         }
+
         Node<T> current = head;
         while (current.getNext() != null) {
             if (current.getNext().getValue().equals(value)) {
