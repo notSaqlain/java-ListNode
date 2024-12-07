@@ -67,20 +67,18 @@ public class LinkedList<T> {
         }
     
         Node<T> first = head;
-        Node<T> prevToLast = null;
+        Node<T> temp = null;
         Node<T> last = head;
     
-        // Traverse to find the last node and its previous node
         while (last.getNext() != null) {
-            prevToLast = last;
+            temp = last;
             last = last.getNext();
         }
     
-        // Update pointers to swap the first and last nodes
-        prevToLast.setNext(first); // Previous to last node points to the first node
-        last.setNext(first.getNext()); // Last node points to the second node
-        first.setNext(null); // First node becomes the new last node
-        head = last; // Update head to point to the new first node
+        temp.setNext(first);
+        last.setNext(first.getNext());
+        first.setNext(null);
+        head = last;
     }
     
 
