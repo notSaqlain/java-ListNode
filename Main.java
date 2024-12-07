@@ -32,6 +32,9 @@ public class Main {
         list.LastFirst();
         System.out.println(list);
 
+        JavaLista jl = new JavaLista(new int[] {1, 2, 3, 4, 5});
+        System.out.println(jl);
+
 
     }
 }
