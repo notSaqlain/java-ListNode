@@ -18,7 +18,7 @@ public class JavaLista {
 
     @Override
     public String toString() {
-        return "JavaLista [list=" + list + "]";
+        return "JavaLista [" + list + "]";
     }
 
     
