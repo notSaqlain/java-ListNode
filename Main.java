@@ -36,5 +36,13 @@ public class Main {
         System.out.println(jl);
 
 
+        list.addTail("END!");
+        list.addTail("END!");
+        list.addTail("END!");
+        System.out.println(list);
+
+        list.erase("END!");
+        System.out.println(list);
+
     }
 }
