@@ -80,6 +80,30 @@ public class LinkedList<T> {
         first.setNext(null);
         head = last;
     }
+
+    public void erase(T value) throws Exception {
+        if (head == null) {
+            throw new Exception("Lista vuota!");
+        }
+
+        while (head != null && head.getValue().equals(value)) {
+            head = head.getNext();
+        }
+    
+        if (head == null) {
+            return;
+        }
+    
+        Node<T> current = head;
+        while (current.getNext() != null) {
+            if (current.getNext().getValue().equals(value)) {
+                current.setNext(current.getNext().getNext());
+            } else {
+                current = current.getNext();
+            }
+        }
+    }
+    
     
 
     @Override
