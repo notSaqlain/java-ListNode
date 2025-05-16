@@ -1,16 +1,20 @@
 public class ListaOrdinata<T extends Comparable<T>> extends LinkedList<T> {
 
     @Override
-    public void addHead(T newval){
+    public void addHead(T newval) {
         Node<T> newnode = new Node<>(newval);
-        if(head == null){
+        if (head==null) { head = newnode; return; }
+        Node<T> temp = head;
+        if (head.getValue().compareTo(newval) > 0) {
+            newnode.setNext(head);
             head = newnode;
-        } else {
-            Node<T> temp = head;
-            while(temp.getValue().compareTo(newval)>0 && temp.getNext()!=null) temp = temp.getNext();
-            newnode.setNext(temp.getNext());
-            temp.setNext(newnode);
+            return;
         }
+        while (temp.getNext()!=null && temp.getNext().getValue().compareTo(newval) <0){
+            temp=temp.getNext();
+        }
+        newnode.setNext(temp.getNext());
+        temp.setNext (newnode);
     }
     
 }
