@@ -1,5 +1,5 @@
 public class LinkedList<T> {
-    Node<T> head;
+    protected Node<T> head;
     Node<T> tail;
 
     public LinkedList() {
