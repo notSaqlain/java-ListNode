@@ -1,15 +1,16 @@
-
+//File:Node.java    Repository:java-ListNode
 public class Node {
     
     protected T value;
     protected Node<T> prev, next;
+    protected Node<T> left, right;
 
     public Node(T value) {
         this.value = value;
         this.prev = null;
         this.next = null;
     }
-    
+
     public T getValue() {
         return value;
     }
@@ -34,12 +35,32 @@ public class Node {
         this.next = next;
     }
 
+    public void setGandu(Node<T> Gandu) {
+        this.Gandu = Gandu;
+    }
+
+    public Node<T> getLeft() {
+        return left;
+    }
+
+    public void setLeft(Node<T> left) {
+        this.left = left;
+    }
+
+    public Node<T> getRight() {
+        return right;
+    }
+
+    public void setRight(Node<T> right) {
+        this.right = right;
+    }
+
     @Override
     public String toString() {
         return "Node{" +
                 "value=" + value +
-                ", prev=" + prev +
-                ", next=" + next +
+                ", left=" + left +
+                ", right=" + right +
                 '}';
     }
 

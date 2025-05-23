@@ -1,4 +1,4 @@
-//
+//File:Tree.java    Repository:java-ListNode
 public class Tree<T extends Comparable<T>> {
     
     private Node<T> root;
@@ -8,21 +8,30 @@ public class Tree<T extends Comparable<T>> {
     }
     
     public void insert(T value) {
-        root = insertRec(root, value);
-    }
-    
-    private Node<T> insertRec(Node<T> root, T value) {
+        Node<T> newNode = new Node<>(value);
         if (root == null) {
-            root = new Node<>(value);
-            return root;
+            root = newNode;
+            return;
         }
-        
-        if (value.compareTo(root.getValue()) < 0) {
-            root.setPrev(insertRec(root.getPrev(), value));
-        } else if (value.compareTo(root.getValue()) > 0) {
-            root.setNext(insertRec(root.getNext(), value));
+
+        Node<T> currentNode = root;
+        while (true) {
+            if (value.compareTo(currentNode.getValue()) < 0) {
+                if (currentNode.getLeft() == null) {
+                    currentNode.setLeft(newNode);
+                    return;
+                } else {
+                    currentNode = currentNode.getLeft();
+                }
+            } else {
+                if (currentNode.getRight() == null) {
+                    currentNode.setRight(newNode);
+                    return;
+                } else {
+                    currentNode = currentNode.getRight();
+                }
+            }
+            
         }
-        
-        return root;
     }
 }
