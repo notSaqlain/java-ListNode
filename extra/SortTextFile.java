@@ -1,3 +1,4 @@
+package extra;
 import java.util.Scanner;
 
 import LinkedList.ListaOrdinata;
