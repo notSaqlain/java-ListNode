@@ -34,4 +34,11 @@ public class Tree<T extends Comparable<T>> {
             
         }
     }
+
+    @Override
+    public String toString() {
+        return "Tree{" +
+                "root=" + root +
+                '}';
+    }
 }
