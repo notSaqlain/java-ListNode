@@ -1,3 +1,4 @@
+package LinkedList;
 public class JavaLista {
     // public JavaLista(int[] array) {
     //     LinkedList<Integer> list = new LinkedList<>();

@@ -1,3 +1,4 @@
+package LinkedList;
 public class ListaOrdinata<T extends Comparable<T>> extends LinkedList<T> {
 
     @Override

@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import LinkedList.ListaOrdinata;
+
 public class SortTextFile {
     // usa treenode: leggi il file di testo, lo ordini salvando in una lista ordinata e lo stampi
     // use Tree.java and TreeNode.java

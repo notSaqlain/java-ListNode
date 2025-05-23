@@ -1,3 +1,4 @@
+package LinkedList;
 public class LinkedList<T> {
     protected Node<T> head;
     Node<T> tail;
