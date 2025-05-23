@@ -35,10 +35,35 @@ public class Tree<T extends Comparable<T>> {
         }
     }
 
+    public void visita(StringBuilder sb, Node<T> node) {
+        if(n==null) {
+            return;
+        }
+        if(node.getLeft() != null) {
+            visita(sb, node.getLeft());
+        }
+        sb.append(node.getValue()).append(" ");
+        if(node.getRight() != null) {
+            visita(sb, node.getRight());
+        }
+
+        if(node.getRight() != null) {
+            visita(sb, node.getRight());
+        }
+        sb.append(node.getValue()).append(" ");
+        if(node.getLeft() != null) {
+            visita(sb, node.getLeft());
+        }
+
+        if(node.getLeft() != null) {
+            visita(sb, node.getLeft());
+        }
+    }
+
     @Override
     public String toString() {
-        return "Tree{" +
-                "root=" + root +
-                '}';
+        StringBuilder sb = new StringBuilder();
+        visita(sb, root);
+        return sb.toString();
     }
 }
